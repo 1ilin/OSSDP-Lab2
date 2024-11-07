@@ -39,21 +39,21 @@ public class L2022211851_5_Test {
         // 测试示例 4
         int[] nums4 = {};
         int target4 = 0;
-        int expected4 = 1; // 空数组的情况下，存在一个空子序列，其和为0
+        int expected4 = 0; // 空数组的情况下不存在子序列
         assertEquals("空数组情况下计算子序列的数量不正确", expected4, solution.numSubseq(nums4, target4));
 
         // 测试目的：验证算法对于单元素数组的处理。
         // 测试示例 5
         int[] nums5 = {1};
         int target5 = 1;
-        int expected5 = 1; // 单元素数组的情况下，只有该元素本身可以构成子序列
+        int expected5 = 0; // 单元素数组的情况下，没有非空子序列满足条件
         assertEquals("单元素数组情况下计算子序列的数量不正确", expected5, solution.numSubseq(nums5, target5));
 
         // 测试目的：验证算法对于包含负数的数组的处理。
         // 测试示例 6
         int[] nums6 = {-1, 2, 3, 4};
         int target6 = 5;
-        int expected6 = 5; // 包含负数的情况下，需要正确计算子序列的数量
+        int expected6 = 10;
         assertEquals("包含负数的数组计算子序列的数量不正确", expected6, solution.numSubseq(nums6, target6));
     }
 }
